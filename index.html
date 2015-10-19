@@ -1,0 +1,349 @@
+<script type="text/javascript">
+	
+// A property has no ()
+// A function/method has ()
+
+	alert("hello world");
+	document.write("Hello World");
+	console.log("Hello World");
+
+	//Variables
+	//String - letters & numbers, meant for printing or user experience
+	var fullName = "Yohsuke Yamakawa";
+	document.write(fullName)
+	fullName='Yohsuke Yamakawa';
+
+	var myName = 'Rob "The Man" Bunch'
+	var myName = "Rob \"The Man\" Bunch"
+	var myName = "Rob O'Malley Bunch"
+	var myName = 'Rob O\'Malley Bunch'
+
+	fullName = myName;
+	document.write(fullName);
+
+	//Integer - number with no decimal points.
+	var myAge=29;
+	var myAgeString= "29";
+
+	var myBirthday = myAge + 1;
+	document.write(myBirthday);
+	var doubleMyAge= myAge + myAge;
+	document.write(doubleMyAge);
+
+	//Force Number on a String
+	var forceNumber = Number(myAgeString);
+	document.write(forceNumber + 1);
+
+	//Float= any number with a decimal
+	var floatNumber = 12.4;
+	var newFloat = floatNumber + 1;
+	var makeMeAnInteger = parseInt(newFloat);
+	var makeMeAFloat = parseFloat(newFloat);
+	document.write(makeMeAnInteger);
+
+	var makeMeAString = floatNumber.toString();
+	document.write(makeMeAString);
+
+	// Boolean True or False
+	var theTruth = true; //Boolean
+	var theLie = false; //Boolean
+	var theWannabeTruth = "true"; //String
+	var theOtherWannabe = 1; //Integer
+	document.write(typeof(theTruth));
+
+	var myAge = 23;
+	va myBirthday = myAge + 1;
+	myAge++; //Increment by 1
+	myAge--; //Deincrement by 1
+
+	var theMeaningOfLife = 6* 7;
+	console.log(theMeaningOfLife);
+
+	var theNumberTwo = 8 % 3;
+	console.log(theNumberTwo);
+
+	var saleTotal = 3 * 12 + 4;
+	document.write(saleTotal);
+
+
+	//Prompts
+	var name = prompt("What is your Name?");
+	var coinFlip = prompt("heads or tails?", "heads");
+
+	//JS prompts are limited to the scope of the page.
+	//HTML inputs/forms can be accessed within the page and passed on to other pages.
+
+	//Conditionals
+	var numberOfRobs=1;
+	var question = "What is your name?";
+	var defaultAnswer = "Rob";
+	var name = prompt(question, defaultAnswer);
+	if (name === "Rob"){
+		alert("That's my name too!");
+		numberOfRobs++;
+		alert(numberOfRobs);
+	}else{
+		alert("Nice to meet you " + name);
+		numberOfRobs--;
+		alert(numberOfRobs);
+	}
+		//AND
+		if ((name === "Rob") && (last === "Bunch")){
+
+		}
+		//OR
+		if ((name == "Rob") || (last === "Bunch")){
+
+		}
+
+		//Set up a prompt with a math question
+		//If user right congratulate
+		//If wrong, alert them with correct answer
+var question = "What is 15 + 26?";
+var defaultAnswer = 41;
+var answer = prompt(question);
+var answerInteger = parseInt(answer);
+if (answerInteger === defaultAnswer){
+	alert("Good Job Genius");
+}else{
+	alert("Not everyone is Asian, its 41");
+}
+		//give two questions
+		//if the user gets both alert
+		//if the user get one alert
+		//if both wrong console
+		var question1 = "What is 15 + 26?";
+		var defaultAnswer1 = 41;
+		var answer1 = prompt(question1);
+		var answerInteger1 = parseInt(answer1);
+		var question2 = "What is 7 * 2?";
+		var defaultAnswer2 = 14;
+		var answer2 = prompt(question2);
+		var answerInteger2 = parseInt(answer2);
+		if ((answerInteger1 === defaultAnswer1) && (answerInteger2 === defaultAnswer2)){
+			alert("Good Job Genius you got both right!")
+		}
+		else if ((answerInteger1 === defaultAnswer1) && (answerInteger2 !== defaultAnswer2)){
+			alert("meh, you got the first one right, but the second answer is 14 :|")
+		}
+		else if ((answerInteger1 !== defaultAnswer1) && (answerInteger2 === defaultAnswer2)){
+			alert("meh, you got the second one right but the first answer is 41 :|")
+		}
+		else{
+			alert("Its ok, not everyone is Asian")
+		}
+
+		var lotteryWinner = 3;
+		var yourLotteryTicket = 141414141414;
+		if (yourLotteryTicket !== lotteryWinner){
+			alert("Tou luck, No one wins the lottery.");
+		}
+
+		//Random Number
+		var randomNumber = Math.random(); //generates a 16 digit number b/w 0 and 1
+
+		var betweeOneAndHundred = (randomNumber * 100) + 1;
+		var roundedNumber = Math.round(betweeOneAndHundred);
+		console.log(betweeOneAndHundred);
+		console.log(roundedNumber);
+
+		//Genereate a number b/w 1-10
+		//Ask for number b/w 1-10
+		//Match alert
+		//if not also alert
+		//Alert them if number is within 2 of actual number
+		
+		
+
+		var randomNumber = Math.floor((Math.random() * 10) +1);
+		var answer = prompt("Give me a number between 1 and 10");
+		var answerAsNumber = Number(answer);
+
+		if (answerAsNumber === randomNumber){
+			alert("You matched!");
+		}
+		else if(Math.abs(answerAsNumber - randomNumber) <= 2){
+			alert("You're wrong but within 2 numbers");
+		}
+		else{
+			alert("You didn't match :( but the number was" + randomNumber);
+		}
+
+
+		//Arrays, any kind of variable: numbers, booleans, strings, even arrays
+			var nfcSouthTeamOne = "Falcons";
+			var nfcSouthTeamTwo = "Saints";
+			var nfcSouthTeamThree = "Panthers";
+			var nfcSouthTeamFour = "Bucs";
+
+			alert("The best team in the nfc South is the " + nfcSouthTeamOne);
+			alert("The worst team in the nfc South is the " + nfcSouthTeamFour);
+
+			var teams = ["Falcons", "Saints", "Panthers", "Bucs"];
+			alert(teams[0]);
+			alert(teams[3]);
+
+			teams.pop(); //removes last item in array
+			teams.push(); // adds item into array at end
+			teams.unshift(); //adds item into array at front
+			teams.shift(); //removes first item from array
+			teams.splice(x,y); //add and remove staring at 1st number and removes as many as 2nd number
+			teams.slice(x,y); //copy starting at 1st number and stop at 2nd number
+
+
+			var dcTeam = ["Rob", "Max", "Chase", "Joe"];
+			var firstName = "Sam"
+			if (dcTeam[0]===firstName){
+				alert("You work for DigitalCrafts")
+			}
+			else if (dcTeam[1]===firstName){
+				alert("You work for DigitalCrafts")
+			}
+			else if (dcTeam[2]===firstName){
+				alert("You work for DigitalCrafts")
+			}
+			else if (dcTeam[3]===firstName){
+				alert("You work for DigitalCrafts")
+			}
+			else {
+				alert("You do not work for DigitalCrafts")
+			}
+
+			var dcTeam = ["Rob", "Max", "Chase", "Joe"];
+			var firstName="Joe"
+			if(dcTeam.indexOf(firstName) >= 0) {
+				alert("You work for DC")
+			}
+			else{
+				alert("You do not work for DC")
+			}
+
+			//For Loop
+			for(i = 0; i < 4; i++){
+				console.log(i);
+			}
+
+			var dcTeam = ["Rob", "Max", "Chase", "Joe"];
+			for(i = 0; i < 4; i++){
+				if ("Joe" === dcTeam[i]{
+					var message = ("You work for DC");
+				}
+			
+				if(message ==="You work for DC"){
+				alert(message);
+				}
+			}
+			
+			var firstName = "Chance";
+			var dcClass = ["Chance", "Stephen", "Stuart", "Will", "Griffin", "Freddy", "Oliver", "Yoski", "Andrew", "Peter"];
+			for(i = 0, i < dcClass.length; i++){
+				if(firstName ===dcClass[i]){
+					alert("you are a DC student");
+					break;
+					alert("can you read me?");
+				}
+				console.log(dcClass[i]);
+			}
+			
+
+			var dcClass = ["Chance", "Stephen", "Stuart", "Will", "Griffin", "Freddy", "Oliver", "Yoski", "Andrew", "Peter"];
+			var dcClassRoles = ["The Joker", "The Student", "The Helper", "The Sleeper", "The Ninja", "The Ambitious One", "The Clueless One", "The Silent One", "The Butterfly", "The Chemist (BOOM!)"];
+
+			// for(i = 0; i < dcClass.length; i++){
+			// 	for(i = 0; x < dcClass.length; x++){
+			// 		document.write(dcClass[i] + ' - ' + dcClassRoles[x] + '<br />');
+			// 	}
+			// 	}
+			// }
+
+			var studentWithRole;
+			for(i = 0; i < dcClass.length; i++){
+				for(i = 0; x < dcClass.length; x++){
+					var chanceOfTrue = Math.random() * 100;
+					if(chanceOfTrue > 75){
+					studentWithRole = dcClass[i] + " --" + dcClassRoles[x];
+					document.write(dcClass[i]) + '--' dcClassRoles[x] + '<br />');
+					}
+				}				}
+			}
+
+			var className = document.getElementById("class-name");
+			className.
+
+// <!-- //strings are just arrays of character -->
+
+	var myName = "rOb tHE ManIAC";
+	var firstChar = myName.slice(0,1); //will return r
+	var otherChars = myName.slice(1); //will return "Ob tHE ManIAC"
+	var properCaseName = firstChar.toUpperCase() + otherChars.toLowerCase(); //return Rob the maniac
+	document.write(properCaseName[5]);
+
+	document.write("There are" + properCaseName.length + " letters in your name.")
+
+	for(i=0; i < properCaseName.length; i++){
+		document.write(properCaseName[i]);
+	}
+
+	var password = "password";
+	//rules: b/w 4-8 charcters, no spaces, 1 #, 1 uppercase, 1 lowercase
+	if((password.length > 8) || (password.length < 4)){
+		alert("Your password must be between 4 and 8.");
+	}
+	for (i=0; i < password.length; i++){
+		// var character = password.indexOf(' ');
+		// if (character !== -1 ){
+			var character = password [i];
+		if (character === " "){
+			var spaceFound = 1
+		}
+		if (isNaN(character) !== 1 ){
+			var numberFound = 1;
+		}
+		if(password.toLowerCase() === character){
+			var lowerCaseFound = 1;
+		}
+
+		if (password.toUpperCase() === character){
+			var upperCaseFound = 1;
+		}
+	}
+	if (spaceFound === 1){
+		alert("You cannot have any spaces")
+	}
+	if (numberFound !== 1){
+		alert("Your password must contain a number")
+	}
+	if (lowerCaseFound === 1){
+		alert("Your password much contain a lowercase letter")
+	}
+	if (upperCaseFound ===1){
+		alert("Your password must contain an uppercase letter")
+	}
+
+
+
+
+</script>
+
+<div id="className">Hello, DigitalCrafts!</div>
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
